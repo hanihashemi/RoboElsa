@@ -1,8 +1,8 @@
 #include <Arduino.h>
-#include "display.h"
-#include "logger.h"
-#include "mqtt_client.h"
-#include "transport.h"
+#include "drivers/display.h"
+#include "utils/logger.h"
+#include "net/mqtt_client.h"
+#include "net/transport.h"
 
 void setup() {
   Serial.begin(115200);

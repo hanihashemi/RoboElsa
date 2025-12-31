@@ -3,8 +3,8 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 
-#include "config.h"
-#include "display.h"
+#include "config/config.h"
+#include "drivers/display.h"
 
 static Adafruit_SSD1306 display(kScreenWidth, kScreenHeight, &Wire, -1);
 static bool displayReady = false;

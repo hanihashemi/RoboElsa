@@ -2,10 +2,10 @@
 #include <PubSubClient.h>
 #include <string.h>
 
-#include "config.h"
-#include "logger.h"
-#include "mqtt_client.h"
-#include "transport.h"
+#include "config/config.h"
+#include "utils/logger.h"
+#include "net/mqtt_client.h"
+#include "net/transport.h"
 
 static PubSubClient mqtt;
 static char mqttClientId[32];
@@ -15,7 +15,7 @@ static void OnMqttMessage(char *topic, byte *payload, unsigned int length) {
   size_t copyLen = length < sizeof(message) - 1 ? length : sizeof(message) - 1;
   memcpy(message, payload, copyLen);
   message[copyLen] = '\0';
-  Logf("MQTT %s: %s", topic, message);
+  Logf("MQTT: %s", message);
 }
 
 static void BuildMqttClientId() {

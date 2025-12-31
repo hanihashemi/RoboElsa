@@ -2,9 +2,9 @@
 #include <Arduino.h>
 #include <WiFi.h>
 
-#include "config.h"
-#include "logger.h"
-#include "transport.h"
+#include "config/config.h"
+#include "utils/logger.h"
+#include "net/transport.h"
 
 static WiFiClient wifiClient;
 

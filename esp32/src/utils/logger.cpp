@@ -2,8 +2,8 @@
 #include <stdarg.h>
 #include <string.h>
 
-#include "display.h"
-#include "logger.h"
+#include "drivers/display.h"
+#include "utils/logger.h"
 
 static const size_t kLogLineCount = 4;
 static const size_t kMaxLineLen = 22;

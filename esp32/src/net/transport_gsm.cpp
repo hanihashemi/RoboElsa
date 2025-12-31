@@ -3,9 +3,9 @@
 #include <Arduino.h>
 #include <TinyGsmClient.h>
 
-#include "config.h"
-#include "logger.h"
-#include "transport.h"
+#include "config/config.h"
+#include "utils/logger.h"
+#include "net/transport.h"
 
 static HardwareSerial SerialAT(2);
 static TinyGsm modem(SerialAT);
